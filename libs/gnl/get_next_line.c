@@ -6,7 +6,7 @@
 /*   By: jlopes-m <jlopes-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 11:46:25 by jlopes-m          #+#    #+#             */
-/*   Updated: 2022/07/27 11:20:55 by jlopes-m         ###   ########.fr       */
+/*   Updated: 2022/12/07 17:46:10 by jlopes-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,14 +48,14 @@ char	*gnl_verify_stack(char *stack, char *buffer, int fd_reading)
 	tmp = NULL;
 	if (fd_reading < BUFFER_SIZE)
 	{
-		tmp = ft_copy(stack, 0, ft_index(stack));
+		tmp = gnl_copy(stack, 0, gnl_index(stack));
 		return (free(buffer), tmp);
 	}
 	while (stack[i] != '\0')
 	{
 		if (stack[i] == '\n')
 		{
-			tmp = ft_copy(stack, 0, i);
+			tmp = gnl_copy(stack, 0, i);
 			return (free(buffer), tmp);
 		}
 		i++;
@@ -126,7 +126,7 @@ char	*get_next_line(int fd)
 		return (NULL);
 	while (fd_reading >= 0)
 	{
-		stack = ft_strjoin(stack, buffer);
+		stack = gnl_strjoin(stack, buffer);
 		if (stack == NULL || stack[0] == 0)
 			return (free(buffer), free(stack), NULL);
 		tmp = gnl_verify_stack(stack, buffer, fd_reading);

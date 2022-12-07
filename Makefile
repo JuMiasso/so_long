@@ -6,7 +6,7 @@
 #    By: jlopes-m <jlopes-m@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/26 15:18:10 by jlopes-m          #+#    #+#              #
-#    Updated: 2022/12/05 16:51:56 by jlopes-m         ###   ########.fr        #
+#    Updated: 2022/12/07 18:01:54 by jlopes-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ NAME = so_long
 
 FLAGS = -Wall -Werror -Wextra
 
-SRCS_FILES = main.c
+SRCS_FILES =	main.c \
+				parsing.c
 
 SRC_PATH = ./srcs/
 SRC = $(addprefix $(SRC_PATH), $(SRCS_FILES))

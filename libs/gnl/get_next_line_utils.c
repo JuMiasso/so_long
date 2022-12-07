@@ -6,13 +6,13 @@
 /*   By: jlopes-m <jlopes-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 10:21:35 by jlopes-m          #+#    #+#             */
-/*   Updated: 2022/07/19 11:21:57 by jlopes-m         ###   ########.fr       */
+/*   Updated: 2022/12/07 17:45:49 by jlopes-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(char *str)
+size_t	gnl_strlen(char *str)
 {
 	size_t		i;
 
@@ -22,7 +22,7 @@ size_t	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strdup(char *src)
+char	*gnl_strdup(char *src)
 {
 	size_t		i;
 	char		*copy;
@@ -40,7 +40,7 @@ char	*ft_strdup(char *src)
 	return (copy);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*gnl_strjoin(char *s1, char *s2)
 {
 	int		i;
 	int		j;
@@ -51,8 +51,8 @@ char	*ft_strjoin(char *s1, char *s2)
 	if (!s1 && s2[i] == 0)
 		return (NULL);
 	else if (!s1 && s2)
-		s1 = ft_strdup("\0");
-	chain = malloc(sizeof(char) * ((ft_strlen(s1) + ft_strlen(s2)) + 1));
+		s1 = gnl_strdup("\0");
+	chain = malloc(sizeof(char) * ((gnl_strlen(s1) + gnl_strlen(s2)) + 1));
 	if (chain == NULL)
 		return (NULL);
 	while (s1 && s1[j] != '\0')
@@ -65,7 +65,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	return (chain);
 }
 
-char	*ft_copy(char *str, int start, int end)
+char	*gnl_copy(char *str, int start, int end)
 {
 	int		i;
 	char	*chain;
@@ -84,7 +84,7 @@ char	*ft_copy(char *str, int start, int end)
 	return (chain);
 }
 
-int	ft_index(char *stack)
+int	gnl_index(char *stack)
 {
 	int	i;
 
