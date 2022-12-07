@@ -6,7 +6,7 @@
 /*   By: jlopes-m <jlopes-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 17:22:10 by jlopes-m          #+#    #+#             */
-/*   Updated: 2022/12/07 19:48:35 by jlopes-m         ###   ########.fr       */
+/*   Updated: 2022/12/07 19:57:58 by jlopes-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	check_map_form(char **tab)
 {
-	int	i;
-	int	size;
+	int					i;
+	long unsigned int	size;
 
 	size = ft_strlen(tab[0]);
 	i = 1;
